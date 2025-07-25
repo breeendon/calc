@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:math_expressions/math_expressions.dart';
 
+//
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Graphing Calculator',
+      title: 'Graphing Calculator',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -37,12 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
   String _functionString = 'sin(x)';
   List<Offset> _graphPoints = [];
 
-  double _minX = -10.0;
-  double _maxX = 10.0;
-  double _minY = -5.0;
-  double _maxY = 5.0;
-  double _scaleX = 20.0;
-  double _scaleY = 20.0;
+  double _minX = -20.0;
+  double _maxX = 20.0;
+  double _minY = -40.0;
+  double _maxY = 0.0;
+  double _scaleX = 30.0;
+  double _scaleY = 30.0;
 
   @override
   void initState() {
@@ -93,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(50.0),
             child: TextField(
               controller: _functionController,
               decoration: const InputDecoration(
